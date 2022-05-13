@@ -6,19 +6,24 @@
     background-color: rgb(221, 76, 76);
 }
 
+#background {
+    background-color: rgb(58, 56, 56);
+}
+
 #sreachBox {
     width: 95%;
     height: 35px;
     margin: 5px;
     padding-left: 10px;
     font-size: 110%;
+    background-color: rgb(202, 201, 201);
 }
 
 #btns {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    background-color: rgb(58, 56, 56);
+    
     color: white;
     padding: 5px 0;
 }

@@ -37,7 +37,7 @@ function App() {
         alert(event.data.make + " row clicked")
     }
 
-    const defaultColDef = { sortable: true, filter: true, editable: true, floatingFilter: true };  //flex:1
+    const defaultColDef = { sortable: true, filter: true, editable: true, floatingFilter: true, flex:1 };
 
     // const cellClickedListener = useCallback(function (event) { //handel cell click
     //     console.log('cellClicked', event);
@@ -77,7 +77,7 @@ function App() {
     }
 
     return (
-        <div>
+        <div id='background'>
             <input type="search" id='sreachBox' placeholder="search somethings..." onChange={onSearchBoxTextChange} />
             <div className="ag-theme-alpine-dark" style={{ height: "92vh", width: "100%" }}>
                 <AgGridReact

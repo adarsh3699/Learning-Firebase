@@ -54,7 +54,11 @@ function App() {
             setGridColumnApi(params.columnApi);
     }
 
-    const handleExportAll = function () {
+    function handleExportBtns (select) {
+        if (select) {
+            gridApi.exportDataAsCsv({onlySelected: true});
+            return;
+        }
         gridApi.exportDataAsCsv();
     }
 
@@ -102,7 +106,8 @@ function App() {
                 />
             </div>
             <div id='btns'>
-                <button id='exportBtn' onClick={() => handleExportAll()}>Export All</button>
+                <button id='exportBtn' onClick={() => handleExportBtns()}>Export All</button>
+                <button id='exportSelectedRowsBtn' onClick={() => handleExportBtns("select")}>Export Selected Rows</button>
                 <button id='hideBtn' onClick={hideColumn}>Hide price column</button>
                 <div id='selectionArea'>
                     <div>Set Pagination Size</div>
